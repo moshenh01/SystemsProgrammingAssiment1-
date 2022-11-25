@@ -58,9 +58,9 @@ void functionB(){
     int i,j;
         scanf("%d %d",&i,&j);
             if((mat[i][j] != SHRT_MAX) && (i != j))
-                printf("true\n");
+                printf("True\n");
             else
-                printf("false\n");
+                printf("False\n");
     // make the buffer jump from ' ' (space) to the next letter.
     scanf("%d",&i);
 }
