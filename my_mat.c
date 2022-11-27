@@ -4,30 +4,18 @@
 #include <stdio.h>
 #include "my_mat.h"
 #include <limits.h>
-int mat[10][10] = {    {0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 },
-                       {0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 },
-                       {0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 },
-                       {0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 },
-                       {0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 },
-                       {0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 },
-                       {0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 },
-                       {0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 },
-                       {0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 },
-                       {0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 }  };
-
+int mat[10][10] = {{}};
 
 int min(int x, int y);
 
 void functionA(){
 
-    int g;
+    
     for(int i = 0; i < 10; i++) {
         for(int j = 0;j < 10;j++) {
             scanf("%d",&mat[i][j]);  
         }
     }
-    // make the buffer jump from ' ' (space) to the next letter.
-    scanf("%d",&g);
     //make all the empty places max num' (except the \).
        
     for (int i = 0; i < 10; i++) {
@@ -61,8 +49,7 @@ void functionB(){
                 printf("True\n");
             else
                 printf("False\n");
-    // make the buffer jump from ' ' (space) to the next letter.
-    scanf("%d",&i);
+
 }
 
 void functionC() {
@@ -73,6 +60,4 @@ void functionC() {
             printf("%d\n", mat[x][y]);
         else
                 printf("-1\n");
-    // make the buffer jump from ' ' (space) to the next letter.
-    scanf("%d",&x);
 }

@@ -6,7 +6,7 @@ int main(){
     //  functions
     char function;
     start:
-    scanf("%c",&function);
+    scanf(" %c",&function);
     switch (function) {
         case 'A':
             functionA();

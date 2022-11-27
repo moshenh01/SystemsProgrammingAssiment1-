@@ -7,7 +7,7 @@ connections: main.o my_mat.o
 	$(CC) $(FLAGS) main.o my_mat.o -o connections 
 	
 main.o: main.c my_mat.h
-	$(CC) $(FLAGS) -c main.c 
+	$(CC) $(FLAGS) -c main.c
 
 my_mat.o: my_mat.c my_mat.h
 	$(CC) $(FLAGS) -c my_mat.c 
@@ -16,3 +16,6 @@ my_mat.o: my_mat.c my_mat.h
 
 clean: 
 	rm -f *.o connections
+
+leakTest: clean connections
+	valgrind --leak-check=full  --track-origins=yes --show-leak-kinds=all --error-exitcode=1 ./connections
